@@ -9,11 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hust.hhh.mystudy.R;
-import hust.hhh.mystudy.main.bean.Card;
-import hust.hhh.mystudy.main.bean.NetCard;
-import hust.hhh.mystudy.main.bean.UICard;
-import hust.hhh.mystudy.main.view.MainAdapter;
-import hust.hhh.mystudy.main.view.MainItemDecoration;
+import hust.hhh.mystudy.main.card.Card;
+import hust.hhh.mystudy.main.card.NetCard;
+import hust.hhh.mystudy.main.card.UICard;
 
 /**
  * 主界面
@@ -39,36 +37,35 @@ public class MainActivity extends AppCompatActivity {
 
         mRecycleView.setLayoutManager(layoutManager);
         mRecycleView.addItemDecoration(decoration);
-        mRecycleView.setAdapter(new MainAdapter(this, mCards));
-
+        mRecycleView.setAdapter(new MainRecycleAdapter(this, mCards));
     }
 
     private void initData() {
         mCards = new ArrayList<>();
 
-        ArrayList<String> items0 = new ArrayList<>();
-        items0.add("数据1");
-        items0.add("数据2");
-        items0.add("数据3");
-        items0.add("数据4");
-        items0.add("数据5");
-        items0.add("数据6");
-        items0.add("数据7");
-        items0.add("数据8");
-        Card card0 = new UICard();
+        ArrayList<Item> items0 = new ArrayList<>();
+        items0.add(new Item("数据1", MainActivity.class));
+        items0.add(new Item("数据2", MainActivity.class));
+        items0.add(new Item("数据3", MainActivity.class));
+        items0.add(new Item("数据4", MainActivity.class));
+        items0.add(new Item("数据5", MainActivity.class));
+        Card card0 = new UICard(this);
         card0.setItems(items0);
         mCards.add(card0);
 
-        ArrayList<String> items1 = new ArrayList<>();
-        items1.add("1111111");
-        items1.add("2222222");
-        items1.add("3333333");
-        items1.add("4444444");
-        items1.add("5555555");
-        items1.add("6666666");
-        items1.add("7777777");
-        items1.add("8888888");
-        Card card1 = new UICard();
+        ArrayList<Item> items1 = new ArrayList<>();
+        items1.add(new Item("1",MainActivity.class));
+        items1.add(new Item("2",MainActivity.class));
+        items1.add(new Item("3",MainActivity.class));
+        items1.add(new Item("4",MainActivity.class));
+        items1.add(new Item("5",MainActivity.class));
+        items1.add(new Item("6",MainActivity.class));
+        items1.add(new Item("7",MainActivity.class));
+        items1.add(new Item("8",MainActivity.class));
+        items1.add(new Item("9",MainActivity.class));
+        items1.add(new Item("10",MainActivity.class));
+        items1.add(new Item("11",MainActivity.class));
+        Card card1 = new UICard(this);
         card1.setItems(items1);
         mCards.add(card1);
 
@@ -81,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         items2.add("Creepin' up on you");
         items2.add("I've been hanging 'round all the places you haunt");
         items2.add("Do I have to breathe without you?");
-        Card card2 = new NetCard();
+        Card card2 = new NetCard(this);
         card2.setItems(items2);
         mCards.add(card2);
 
@@ -94,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         items3.add("让你轻易看出爱的纯粹");
         items3.add("我还在这里执迷不悔");
         items3.add("而你已决定要远走高飞");
-        Card card3 = new NetCard();
+        Card card3 = new NetCard(this);
         card3.setItems(items3);
         mCards.add(card3);
     }

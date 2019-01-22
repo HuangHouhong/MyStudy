@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * 自定义无法滑动但可以点击的列表，类似ListView丧失了滑动功能
  */
-public class CustomList extends LinearLayout implements CustomListAdapter.DataSetObserver {
+public class CustomListLayout extends LinearLayout implements CustomListAdapter.DataSetObserver {
 
     private OnItemClickListener mOnItemClickListener;
     private CustomListAdapter mAdapter;
@@ -22,22 +22,22 @@ public class CustomList extends LinearLayout implements CustomListAdapter.DataSe
     // 该自定义ListView中
     private List<View> mViewCache;
 
-    public CustomList(Context context) {
+    public CustomListLayout(Context context) {
         super(context);
         init();
     }
 
-    public CustomList(Context context, @Nullable AttributeSet attrs) {
+    public CustomListLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public CustomList(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CustomListLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
-    public CustomList(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public CustomListLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }

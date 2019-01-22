@@ -1,4 +1,4 @@
-package hust.hhh.mystudy.main.view;
+package hust.hhh.mystudy.main;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,6 +14,7 @@ import android.view.View;
 
 /**
  * Created by 98595 on 2019/1/7.
+ * RecycleView 每个条目之间的分割线
  */
 
 public class MainItemDecoration extends ItemDecoration {
