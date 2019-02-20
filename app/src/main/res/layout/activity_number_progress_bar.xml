@@ -47,7 +47,7 @@
 
     <hust.hhh.mystudy.ui.progressbar.NumberProgressBar
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:paddingEnd="20dp"
         android:paddingStart="20dp"
@@ -55,4 +55,12 @@
         app:text_color="#ffff00"
         app:text_size="50sp"/>
 
+    <hust.hhh.mystudy.ui.progressbar.NumberProgressBar
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:background="#3300ff00"
+        app:current_progress="10"/>
 </LinearLayout>

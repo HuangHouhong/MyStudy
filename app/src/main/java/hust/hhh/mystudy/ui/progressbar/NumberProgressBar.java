@@ -18,7 +18,7 @@ import hust.hhh.mystudy.R;
  * <p>
  * 缺陷：
  * 1. 自定义属性中，缺少一些判断。
- * 如：自定义文字过大，超过了空间高度，最好能够自适应。
+ * 如：在xml中指定View高度，如果自定义文字过大，超过了空间高度，字体将显示不全，最好能够做到自适应。
  */
 
 public class NumberProgressBar extends View {
@@ -146,7 +146,7 @@ public class NumberProgressBar extends View {
 
         int padding = isWidth ? getPaddingStart() + getPaddingEnd() : getPaddingTop() + getPaddingBottom();
 
-        //确定默认宽或者高。这里直接使用系统推荐的最小宽高，然后加上padding
+        //确定默认宽或者高，注意加上padding
         int result = padding + (isWidth ? getSuggestedMinimumWidth() : getSuggestedMinimumHeight());
 
         if (specMode == MeasureSpec.EXACTLY) {
@@ -159,11 +159,14 @@ public class NumberProgressBar extends View {
         return result;
     }
 
-    @Override
-    protected int getSuggestedMinimumWidth() {
-        return super.getSuggestedMinimumWidth();
-    }
-
+    /**
+     * 重写默认的最小高度。
+     * 不需要重写默认的最小宽度。
+     * 如果在xml中使用wrap_content,那么进度条区域只剩下了文字，没有了进度条，
+     * 干脆直接不处理，相当于使用match_parent效果。
+     *
+     * @return
+     */
     @Override
     protected int getSuggestedMinimumHeight() {
         return (int) Math.max((int) Math.max(mReachedHeight, mUnreachedHeight), mTextSize);
