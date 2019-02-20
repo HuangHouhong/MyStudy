@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="volume_attrs">
-        <attr name="ring_width" format="integer"></attr>
-        <attr name="ring_sweep" format="integer"></attr>
-        <attr name="tick_color" format="color"></attr>
-        <attr name="tick_sp_color" format="color"></attr>
+    <!--NumberProgressBar空间中自定义属性-->
+    <declare-styleable name="NumberProgressBar">
         <attr name="text_color" format="color"></attr>
+        <attr name="text_size" format="dimension"></attr>
+        <attr name="reached_height" format="dimension"></attr>
+        <attr name="reached_color" format="color"></attr>
+        <attr name="unreached_height" format="dimension"></attr>
+        <attr name="unreached_color" format="color"></attr>
+        <attr name="current_progress" format="integer"></attr>
     </declare-styleable>
 
 </resources>

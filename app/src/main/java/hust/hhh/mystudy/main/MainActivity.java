@@ -12,6 +12,7 @@ import hust.hhh.mystudy.R;
 import hust.hhh.mystudy.main.card.Card;
 import hust.hhh.mystudy.main.card.NetCard;
 import hust.hhh.mystudy.main.card.UICard;
+import hust.hhh.mystudy.ui.progressbar.NumberProgressBarActivity;
 
 /**
  * 主界面
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mCards = new ArrayList<>();
 
         ArrayList<Item> items0 = new ArrayList<>();
-        items0.add(new Item("数据1", MainActivity.class));
+        items0.add(new Item("带数字的进度条", NumberProgressBarActivity.class));
         items0.add(new Item("数据2", MainActivity.class));
         items0.add(new Item("数据3", MainActivity.class));
         items0.add(new Item("数据4", MainActivity.class));

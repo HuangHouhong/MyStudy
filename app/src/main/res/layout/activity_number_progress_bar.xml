@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <hust.hhh.mystudy.ui.progressbar.NumberProgressBar
+        android:id="@+id/number_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#110000ff"
+        android:paddingBottom="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="50dp"
+        android:paddingTop="20dp"/>
+
+    <hust.hhh.mystudy.ui.progressbar.NumberProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        app:current_progress="20"
+        app:text_color="#00ffff"
+        app:text_size="30sp"/>
+
+    <hust.hhh.mystudy.ui.progressbar.NumberProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        app:current_progress="40"
+        app:reached_color="#00ff00"
+        app:reached_height="40dp"/>
+
+    <hust.hhh.mystudy.ui.progressbar.NumberProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        app:current_progress="60"
+        app:unreached_color="#000000"
+        app:unreached_height="40dp"/>
+
+    <hust.hhh.mystudy.ui.progressbar.NumberProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        app:current_progress="80"
+        app:text_color="#ffff00"
+        app:text_size="50sp"/>
+
+</LinearLayout>

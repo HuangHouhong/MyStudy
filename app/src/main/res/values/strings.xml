@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">MyStudy</string>
-    <string name="title_activity_volume">VolumeActivity</string>
+    <string name="app_name">学习笔记</string>
+    <string name="title_activity_number_progress_bar">NumberProgressBarActivity</string>
 </resources>
