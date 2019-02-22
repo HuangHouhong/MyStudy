@@ -119,7 +119,7 @@ public class NetCard extends Card {
                 view = convertView;
                 holder = (ViewHolder) view.getTag();
             } else {
-                view = LayoutInflater.from(mContext).inflate(R.layout.activity_main_card_ui_item, null);
+                view = LayoutInflater.from(mContext).inflate(R.layout.activity_main_card_net_item, null);
                 holder = new ViewHolder(view);
                 view.setTag(holder);
             }
