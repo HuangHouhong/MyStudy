@@ -23,6 +23,13 @@
             android:textColor="#ffff0000"
             android:textSize="30sp"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="#ff0000ff"/>
+
         <hust.hhh.mystudy.main.view.CustomListLayout
             android:id="@+id/customlist"
             android:layout_width="match_parent"
